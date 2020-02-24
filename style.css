@@ -1,16 +1,285 @@
-body {
-    margin: 0;
-    font-family: 'Arvo', serif;
-    font-family: 'Sacramento', cursive;
+header{ /*general header*/
+    overflow: hidden;
+    color: #2E1900;
+    margin: 0px 150px;
 }
 
-/*navbar  style */
+ .logo h4{ /*logo in header*/
+    float: left;
+    font-family: 'Sacramento', cursive;
+    font-size: 26px;
+} 
 
-.navbar a{
+header a { /*nav bar in header*/
     float: right;
+    font-size: 16px;
+    color: #2E1900;
+    padding-top: 45px;
+    text-decoration: none;
+}
+
+ .about{
+    padding-right: 15px; /*add space for about menu option*/
+}
+
+body { /*general body*/
+    font-family: 'Arvo', serif;
+    color: #2E1900;
+    margin: auto;
+    overflow-x: hidden;  /*prevent additional whitespace on xaxis*/
+}
+
+/*home page*/
+
+.banner{ /*home page banner*/
+    position: relative;
     text-align: center;
-    padding: 14px 16px;
-    font-size: 12px;
+}
+
+
+.banner-head { /*title "Made for you" in banner*/
+    position: absolute; 
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px;
+    font-size: 60px;  
+    font-weight: bolder;
+}
+
+.banner-sub { /*subtitle in banner*/
+    position: absolute;
+    font-size: 18px;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.banner-order { /*order now button in banner*/
+    position: absolute;
+    top: 78%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 60px;
+    border-radius: 45px;
+    font-size: 18px;
+    background-color: white;
+    font-size: 18px;
+    color: #42241E;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3), 0 6px 20px 0 rgba(0,0,0,0.19);
     font-family: 'Arvo', serif;
 
+}
+
+.section1 img{ /*home page "made with love" image*/
+    padding: 150px 50px 150px 150px;
+    width: 700px;
+    float: left;
+}
+
+.textbox1{ /*home page "made with love" text*/
+    font-size: 16px;
+    padding: 250px 150px 200px 0px;
+    vertical-align: middle;
+    margin: auto;
+    line-height: 1.5;
+}
+
+.section2 img{ /*home page "made fresh" image*/
+    padding: 0px 150px 150px 50px;
+    width: 600px;
+    height: 450px;
+    float: right;
+}
+
+.textbox2{ /*home page "made with love" text*/
+    font-size: 16px;
+    padding: 200px 0px 300px 150px;
+    margin: auto;
+    line-height: 1.5;
+}
+
+.socials img{ /*footer social media images*/
+    width: 35px;
+    height: 35px;
+    padding-top: 20px;
+    padding-right: 5px;
+
+}
+
+.foot{ /*general footer*/
+    display: grid;
+    grid-template-columns: auto auto auto auto; 
+    padding-top: 30px;
+    padding-bottom: 50px;
+    background-color: #F2E0CA;
+    width: 100%;
+}
+
+.foot .logo{ /*logo in footer*/
+    padding-left: 150px;
+}
+
+/*product browsing page*/
+
+.title{ /*title in product browsing page*/
+    background-color: #F2E0CA;
+    text-align: center;
+    font-size: 20px;
+    padding: 5px 0px;
+}
+
+.gallery{ /*product browsing page gallery images*/
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    margin: 0px 150px;
+    grid-gap: 40px;
+}
+
+.item{ /*each individual item and caption in gallery*/
+    margin: 0px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+.column a{ /*link to product detail page*/
+    text-decoration: none;
+    color: #2E1900;
+}
+
+/*product detail page*/
+
+.image1{ /*image in product detail page*/
+    padding-left: 150px;
+    padding-top: 50px;
+    padding-bottom: 200px;
+    width: 550px;
+    float: left;
+}
+
+.product{ /*body of product detail page*/
+    float: right;
+    padding-top: 40px;
+    line-height: 10px;
+    padding-right: 150px;
+}
+
+.info p{ /*cost of product*/
+    font-size: 20px;
+}
+
+.glaze h3, .qty h3{ /*qty and glaze header*/
+    float: left;
+}
+
+.glazeButton{ /*glaze options*/
+    display: grid;
+    grid-template-rows: auto auto;
+    float: right;
+    grid-gap: 10px;
+    grid-column-gap: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+
+}
+
+.glaze{ /*glaze section*/
+    padding-bottom: 100px;
+    padding-top: 40px;
+}
+
+.option button{ /*individual glaze options*/
+    border: 1px solid #2E1900;
+    border-radius: 8px;
+    width: 250px;
+    height: 40px;
+    font-size: 14px;
+}
+
+.qty{ /*quantity section*/
+    padding-top: 50px;
+}
+
+.qtyButton button{ /*quantity button*/
+    border: 1px solid #2E1900;
+    border-radius: 8px;
+    padding: 10px 30px;
+    font-size: 14px;
+}
+
+.qtyButton{ /*quantity button section*/
+    margin: auto;
+    padding-left: 65px;
+    padding-top: 10px;
+}
+
+.cart{ /*add to cart section*/
+    padding-top: 75px;
+}
+
+.cart button{ /*add to cart section*/
+    background-color: #D59E5D;
+    color: white;
+    padding: 20px 230px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.bottom{ /*more details and shipping section*/
+    padding-top: 100px;
+    padding-bottom: 150px;
+}
+
+.bottom p{ /*headers of bottom section*/
+    padding-top: 10px;
+    padding-bottom: 10px
+}
+
+.bottom hr{ /*line as dividers */
+    border: 1px solid #D59E5D;
+}
+
+i { /*drop down section*/
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.down { /* drop down*/
+    float: right;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+/*About us*/
+
+.learn{
+    padding-left: 150px;
+    padding-top: 50px;
+    padding-right: 150px;
+}
+
+.rolls { /*title in product browsing page*/
+    background-color: #F2E0CA;
+    text-align: center;
+    font-size: 20px;
+    padding: 5px 0px;
+}
+
+.yummy{
+    float: left;
+    padding-right: 30px;
+    padding-bottom: 100px;
+}
+
+.who h3{
+    text-decoration: underline #D59E5D;
+}
+
+.who .logo{
+    font-family: 'Sacramento', cursive;
+    font-size: 26px;
 }
