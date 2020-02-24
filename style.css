@@ -71,6 +71,11 @@ body { /*general body*/
 
 }
 
+.banner-order a{
+    text-decoration: none;
+    color: #42241E;
+}
+
 .section1 img{ /*home page "made with love" image*/
     padding: 150px 50px 150px 150px;
     width: 700px;
@@ -256,30 +261,30 @@ i { /*drop down section*/
 
 /*About us*/
 
-.learn{
+.learn{ /*General section*/
     padding-left: 150px;
     padding-top: 50px;
     padding-right: 150px;
 }
 
-.rolls { /*title in product browsing page*/
+.rolls { /*title */
     background-color: #F2E0CA;
     text-align: center;
     font-size: 20px;
     padding: 5px 0px;
 }
 
-.yummy{
+.yummy{ /*image*/
     float: left;
     padding-right: 30px;
     padding-bottom: 100px;
 }
 
-.who h3{
+.who h3{ /*About us header*/
     text-decoration: underline #D59E5D;
 }
 
-.who .logo{
+.who .logo{ /*About us signing*/
     font-family: 'Sacramento', cursive;
     font-size: 26px;
 }
