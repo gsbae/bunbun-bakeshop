@@ -5,46 +5,52 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <link href="https://fonts.googleapis.com/css?family=Arvo|Sacramento&display=swap" rel="stylesheet">
         <title>Bun Bun Bakeshop</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
     </head>
 
     <body>
         <header>
-            <div class="logo">
-                <h4>Bun Bun Bakeshop</h4>
-            </div>
+            <a class="logo" href="index.html">Bun Bun Bakeshop</a>
             <!-- Navigation bar  -->
             <nav class="navbar">
-                <a href="rolls.html">Our rolls</a>
-                <a class = "about" href="about.html">About us</a>
+                <a id = "about" href="about.html">About us</a>
+                <a id="ourrolls" href="rolls.html">Our rolls</a>
+                <a id = "shop" href="cart.html">
+                    <img id = "cartimg" src="images/cart.png">
+                    <input type="text" id="inc" value="0"></input>
+                </a>
             </nav>
-    </header>
+        </header>
+
         <!-- intro banner in home page -->
         <div class="banner">
-            <img alt="banner" class="home" src="images/home.png">
-            <h1 class="banner-head">MADE FOR YOU</h1>
-            <p class="banner-sub">Treat yourself to our fresh homemade cinnamon <br> buns only at Bun Bun Bakeshop</p>
-            <button class="banner-order"><a href="rolls.html">order now</a></button>
+            <img alt="banner" id="home" src="images/home.png">
+            <h1 id="banner-head">MADE FOR YOU</h1>
+            <p id="banner-sub">Treat yourself to our fresh homemade cinnamon <br> buns only at Bun Bun Bakeshop</p>
+            <button id="banner-order"><a href="rolls.html">order now</a></button>
         </div>
 
         <!-- 1st section below banner -->
-        <div class="section1">
-            <img alt="baking" src="images/baking.jpg">
-            <div class="textbox1">
-                <h1>Made with love and care.</h1>
-                <p>We put in every ounce of love, care, and effort we can into each and every roll to ensure that everyone gets to experience the love that they deserve. We truly care about our customers and their relationship with us. </p>
-            </div>
+        <div>
+        <div class=img1>
+            <img alt="baking" id="stir" src="images/baking.jpg">
         </div>
-
+        <div class="textbox1">
+            <h1>Made with love.</h1>
+            <p>We put in every ounce of love, care, and effort we can into each and every roll to ensure that everyone gets to experience the love that they deserve. We truly care about our customers and their relationship with us. </p>
+        </div>
+        </div>
         <!-- 2nd section below banner -->
-        <div class="section2">
-            <img alt="cinnamon buns" src="images/icing.jpg">
-            <div class="textbox2">
-                <h1>Made fresh and warm.</h1>
-                <p>We bake our cinnamon rolls fresh everyday to give you the best quality you can get. We work hard every morning to provide you with fresh cinammon rolls.  </p>
-            </div>
+        <div>
+        <div class="textbox2">
+            <h1>Made fresh and warm.</h1>
+            <p>We bake our cinnamon rolls fresh everyday to give you the best quality you can get. We work hard every morning to provide you with fresh cinammon rolls.  </p>
         </div>
-
+        <div class="img2">
+            <img alt="cinnamon buns" src="images/icing.jpg">
+         </div>
+        </div>
             <!-- Footer with additional info -->
         <footer>
             <div class="foot">

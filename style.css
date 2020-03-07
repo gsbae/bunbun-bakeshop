@@ -1,33 +1,59 @@
 header{ /*general header*/
     overflow: hidden;
     color: #2E1900;
-    margin: 0px 150px;
+    margin: 0px 10%;
 }
 
- .logo h4{ /*logo in header*/
+ .logo{ /*logo in header*/
     float: left;
     font-family: 'Sacramento', cursive;
     font-size: 26px;
+    padding-top: 45px;
 } 
 
-header a { /*nav bar in header*/
+.navbar { /*nav bar in header*/
     float: right;
     font-size: 16px;
     color: #2E1900;
     padding-top: 45px;
-    text-decoration: none;
 }
 
- .about{
+.navbar a:hover{
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+a{
+    text-decoration: none;
+    color: #2E1900;
+}
+
+ #about, #ourrolls{
     padding-right: 15px; /*add space for about menu option*/
 }
+
+#cartimg{
+    width: 20px;
+}
+
+#inc{
+    display: inline-block;
+    font-size: 12px;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #F2E0CA;
+}
+
 
 body { /*general body*/
     font-family: 'Arvo', serif;
     color: #2E1900;
-    margin: auto;
+    margin: 0;
     overflow-x: hidden;  /*prevent additional whitespace on xaxis*/
 }
+
 
 /*home page*/
 
@@ -36,8 +62,7 @@ body { /*general body*/
     text-align: center;
 }
 
-
-.banner-head { /*title "Made for you" in banner*/
+#banner-head { /*title "Made for you" in banner*/
     position: absolute; 
     top: 30%;
     left: 50%;
@@ -45,17 +70,25 @@ body { /*general body*/
     padding: 50px;
     font-size: 60px;  
     font-weight: bolder;
+    white-space: nowrap;
 }
 
-.banner-sub { /*subtitle in banner*/
+#home{
+    max-width: 100%
+    width: auto;
+    height: auto;
+}
+
+#banner-sub { /*subtitle in banner*/
     position: absolute;
     font-size: 18px;
     top: 48%;
     left: 50%;
     transform: translate(-50%, -50%);
+    white-space: nowrap;
 }
 
-.banner-order { /*order now button in banner*/
+#banner-order { /*order now button in banner*/
     position: absolute;
     top: 78%;
     left: 50%;
@@ -71,37 +104,54 @@ body { /*general body*/
 
 }
 
-.banner-order a{
+#banner-order a{
     text-decoration: none;
     color: #42241E;
 }
 
-.section1 img{ /*home page "made with love" image*/
-    padding: 150px 50px 150px 150px;
-    width: 700px;
+#banner-order:hover{
+    background-color: #D59E5D;
+}
+
+
+.img1{ /*home page "made with love" image*/
+    padding: 150px 0% 50px 10%;
     float: left;
+    width: 50%;
+}
+
+.img1 img{
+    width: 100%;
+    height: auto;
 }
 
 .textbox1{ /*home page "made with love" text*/
+    width: 25%;
+    float: left;
     font-size: 16px;
-    padding: 250px 150px 200px 0px;
-    vertical-align: middle;
-    margin: auto;
     line-height: 1.5;
+    padding: 150px 10% 50px 30px;
+    clear: right;
+
 }
 
-.section2 img{ /*home page "made fresh" image*/
-    padding: 0px 150px 150px 50px;
-    width: 600px;
-    height: 450px;
-    float: right;
+.img2{ /*home page "made with love" image*/
+    padding: 150px 10% 50px 30px;
+    float: left;
+    width: 40%;
+}
+
+.img2 img{
+    width: 100%;
+    height: auto;
 }
 
 .textbox2{ /*home page "made with love" text*/
+    width: 35%;
+    float: left;
     font-size: 16px;
-    padding: 200px 0px 300px 150px;
-    margin: auto;
     line-height: 1.5;
+    padding: 150px 0pc 50px 10%;
 }
 
 .socials img{ /*footer social media images*/
@@ -122,7 +172,14 @@ body { /*general body*/
 }
 
 .foot .logo{ /*logo in footer*/
-    padding-left: 150px;
+    float: left;
+    padding-top: 0%;
+    padding-left: 10%;
+    vertical-align: middle;
+}
+
+.socials{
+    float: right;
 }
 
 /*product browsing page*/
@@ -155,68 +212,63 @@ body { /*general body*/
 
 /*product detail page*/
 
-.image1{ /*image in product detail page*/
-    padding-left: 150px;
-    padding-top: 50px;
-    padding-bottom: 200px;
-    width: 550px;
+.prodImg{
     float: left;
+    width: 40%;
+    padding-left: 10%;
+    padding-top: 50px;
+}
+
+.image1{
+    width: 90%;
 }
 
 .product{ /*body of product detail page*/
     float: right;
     padding-top: 40px;
     line-height: 10px;
-    padding-right: 150px;
+    padding-right: 15%;
+    width: 30%;
+}
+
+.info h1{
+    max-height: 40px;
+    line-height: 30px;
+    padding-bottom: 0px;
+
 }
 
 .info p{ /*cost of product*/
     font-size: 20px;
+    padding-top: 0px;
 }
 
-.glaze h3, .qty h3{ /*qty and glaze header*/
-    float: left;
-}
-
-.glazeButton{ /*glaze options*/
-    display: grid;
-    grid-template-rows: auto auto;
-    float: right;
-    grid-gap: 10px;
-    grid-column-gap: 10px;
-    padding-top: 10px;
-    padding-left: 10px;
-
-}
-
-.glaze{ /*glaze section*/
-    padding-bottom: 100px;
-    padding-top: 40px;
-}
-
-.option button{ /*individual glaze options*/
-    border: 1px solid #2E1900;
-    border-radius: 8px;
-    width: 250px;
-    height: 40px;
-    font-size: 14px;
-}
-
-.qty{ /*quantity section*/
+.glaze{
     padding-top: 50px;
+    padding-bottom: 50px;
 }
 
-.qtyButton button{ /*quantity button*/
-    border: 1px solid #2E1900;
-    border-radius: 8px;
-    padding: 10px 30px;
-    font-size: 14px;
+.glaze label, .qty label{
+    padding-right: 10px;
 }
 
-.qtyButton{ /*quantity button section*/
-    margin: auto;
-    padding-left: 65px;
-    padding-top: 10px;
+#glazeOptions{
+    height: 35px;
+    width: 200px;
+    font-size: 16px;
+    border-color: #2E1900;
+    background-color: white;
+    font-family: 'Arvo', serif;
+}
+
+
+#qtyOptions{
+    height: 35px;
+    width: 100px;
+    font-size: 16px;
+    border-color: #2E1900;
+    background-color: white;
+    font-family: 'Arvo', serif;
 }
 
 .cart{ /*add to cart section*/
@@ -225,11 +277,22 @@ body { /*general body*/
 
 .cart button{ /*add to cart section*/
     background-color: #D59E5D;
-    color: white;
-    padding: 20px 230px;
+    width: 100%;
+    height: 50px;
     border-radius: 8px;
+}
+
+.cart button:hover{ /*add to cart section*/
+    background-color: #ad7f47;
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+}
+
+#cart{
     font-size: 16px;
     font-weight: bold;
+    color: white;
 }
 
 .bottom{ /*more details and shipping section*/
@@ -261,10 +324,8 @@ i { /*drop down section*/
 
 /*About us*/
 
-.learn{ /*General section*/
-    padding-left: 150px;
+.learn {
     padding-top: 50px;
-    padding-right: 150px;
 }
 
 .rolls { /*title */
@@ -274,17 +335,89 @@ i { /*drop down section*/
     padding: 5px 0px;
 }
 
-.yummy{ /*image*/
+.aboutImg{
+    padding-left: 10%;
+    margin: 0;
+    width: 50%;
+    padding-top: 50px;
     float: left;
-    padding-right: 30px;
+    padding-bottom: 100px
+
+}
+
+.aboutImg img{
+    width: 90%;
+}
+
+.who{
+    padding-right: 10%;
+    width: 30%;
+    float: left;
+    padding-top: 50px;
     padding-bottom: 100px;
+
 }
 
 .who h3{ /*About us header*/
     text-decoration: underline #D59E5D;
+    padding: 0px;
 }
 
 .who .logo{ /*About us signing*/
     font-family: 'Sacramento', cursive;
     font-size: 26px;
+}
+
+/*Cart page*/
+.cart-head{
+    padding-top: 50px;
+    word-spacing: 50px;
+}
+
+.order-sum{
+    padding-top: 50px;
+    padding-left: 10%;
+    width: 25%
+}
+
+.cart-prods{
+    float: left;
+    padding-left: 10%;
+}
+
+hr{
+    margin: 0% 10%;
+}
+
+.cart-prods{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    float: left;
+    padding-left: 10%;
+    font-size: 16px;
+}
+
+#cart-bun{
+    margin: 0px;
+    padding-top: 10px;
+}
+
+#cart-glaze{
+    font-size: 14px;
+    text-indent: 20px;
+    margin: 0px;
+    color: #6b5d4d;
+}
+
+.cart-cost{
+    width: 15%;
+    height: 35px;
+    float: right;
+}
+
+.total{
+    float:right;
+    padding-right: 10%;
+    font-weight: bolder;
+    padding-top: 50px;
 }
