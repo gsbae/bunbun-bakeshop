@@ -8,13 +8,13 @@ function addToCart() {
         }, 2000
     );
     document.getElementById('inc').value = ++i;
-    var product = document.createElement("DIV");
-    var name = document.createTextNode("Blackberry Bun");
-    product.appendChild(name);
-    document.getElementByClassName("bag").appendChild(product)
 }
 
 function selectGlaze(){
     document.getElementByClassName("option").style.backgroundColor = "#2E1900";
     document.getElementByClassName("option").style.color = "white";
+}
+
+function deleteListItem(item) {
+    item.parentNode.removeChild(item);
 }

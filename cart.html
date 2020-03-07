@@ -29,17 +29,23 @@
         </div>
 
         <div class="cart-head">
-            <p>Product Quantity Cost</p>
-        </div>
-        <div class="order-sum">
-            <h3>Order Summary</h3>
-        </div>
-        <div class="cart-prods">
-            <p id="cart-bun">Blackberry Bun</p>
-            <p id="cart-glaze">sugar-milk glaze</p>
-        </div>
-        <div class="cart-cost">
-            <p>$21.00</p>
+            <div class="shop-prod">
+                <p>Product</p>
+                <hr>
+                <p id="cart-bun">Blackberry Bun</p>
+                <p id="cart-glaze">sugar-milk glaze</p>
+            </div>
+            <div class="shop-qty">
+                <p>Quantity</p>
+                <hr>
+                <p>6</p>
+            </div>
+            <div class="shop-cost">
+                <p>Cost</p>
+                <hr>
+                <p>$21.00</p>
+            </div>
+            <button class="delete-item" onclick="deleteListItem(this.parentNode)">X</button>
         </div>
         <br>
         <div class="total">
