@@ -19,4 +19,5 @@ function selectGlaze(){
 function deleteRow(item) {
     var row = item.parentNode.parentNode;
     row.parentNode.removeChild(row);
+    document.getElementById('inc').value = --i;
 }
