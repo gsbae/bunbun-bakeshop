@@ -1,80 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- styles -->
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <link href="https://fonts.googleapis.com/css?family=Arvo|Sacramento&display=swap" rel="stylesheet">
-        <title>Bun Bun Bakeshop</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="UTF-8">
-    </head>
+<head>
+    <!-- styles -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Arvo|Sacramento&display=swap" rel="stylesheet">
+    <title>Bun Bun Bakeshop</title>
+    <script src="main.js" type="text/javascript"></script>s
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+</head>
 
-    <body>
-        <header>
-            <a class="logo" href="index.html">Bun Bun Bakeshop</a>
-            <!-- Navigation bar  -->
-            <nav class="navbar">
-                <a id = "about" href="about.html">About us</a>
-                <a id="ourrolls" href="rolls.html">Our rolls</a>
-                <a id = "shop" href="cart.html">
-                    <img id = "cartimg" src="images/cart.png">
-                    <input type="text" id="inc" value="0"></input>
-                </a>
-            </nav>
-        </header>
+<body>
+    <header>
+        <a class="logo" href="index.html">Bun Bun Bakeshop</a>
+        <!-- Navigation bar  -->
+        <nav class="navbar">
+            <a id = "about" href="about.html">About us</a>
+            <a id="ourrolls" href="rolls.html">Our rolls</a>
+            <a id = "shop" href="cart.html">
+                <img id = "cartimg" src="images/cart.png">
+                <input type="text" id="inc" value="0"></input>
+            </a>
+        </nav>
+    </header>
 
-        <!-- Title of the Shopping Cart page -->
-        <div class="title">
-            <h1>Your Cart</h1>
-        </div>
-
-        <div class="cart-head">
-            <div class="shop-prod">
-                <p>Product</p>
+    <!-- Title of the Shopping Cart page -->
+    <div class="title">
+        <h1>Your Cart</h1>
+    </div>
+    <div class="row">
+    <div class="cart-body">
+        <table>
+            <tbody>
+            <tr>
+                <th>Product</th>
+                <th>Glaze</th>
+                <th>Quantity</th>
+                <th>Cost</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>Blackberry Bun</td>
+                <td>                
+                    <select id="glazeOptions">
+                        <option selected>sugar-milk</option>
+                        <option>vanilla-milk</option>
+                        <option>double chocolate</option>
+                        <option>strawberry</option>
+                    </select>
+                </td>
+                <td>
+                    <select id="qtyOptions">
+                        <option>1</option>
+                        <option>3</option>
+                        <option selected>6</option>
+                        <option>12</option>
+                    </select>
+                </td>
+                <td>$21</td>
+                <td><input type="button" value="x" onclick="deleteRow(this)"/></td>
+            </tr>
+            <tr>
+                <td>Original Cinnmaon Roll</td>
+                <td>
+                    <select id="glazeOptions">
+                        <option>sugar-milk</option>
+                        <option>vanilla-milk</option>
+                        <option>double chocolate</option>
+                        <option selected>strawberry</option>
+                    </select>
+                </td>
+                <td>
+                    <select id="qtyOptions">
+                        <option>1</option>
+                        <option>3</option>
+                        <option>6</option>
+                        <option>12</option>
+                    </select></td>
+                <td>$3.50</td>
+                <td><input type="button" value="x" onclick="deleteRow(this)"/></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="order">
+        <div class="summary">
+            <h3>Order Summary</h3>
+                <p><a href="#">Subtotal:</a> <span class="price">$24.50</span></p>
+                <p><a href="#">Tax:</a> <span class="price">-</span></p>
+                <p><a href="#">Shipping:</a> <span class="price">$5.00</span></p>
                 <hr>
-                <p id="cart-bun">Blackberry Bun</p>
-                <p id="cart-glaze">sugar-milk glaze</p>
-            </div>
-            <div class="shop-qty">
-                <p>Quantity</p>
-                <hr>
-                <p>6</p>
-            </div>
-            <div class="shop-cost">
-                <p>Cost</p>
-                <hr>
-                <p>$21.00</p>
-            </div>
-            <button class="delete-item" onclick="deleteListItem(this.parentNode)">X</button>
-        </div>
-        <br>
-        <div class="total">
-            <p>Total Cost: $21.00</p>
-        </div>
-            <!-- Footer with additional info -->
-        <footer>
-            <div class="foot">
-                <div class="logo">
-                    <h4>Bun Bun Bakeshop</h4>
+                <p>Total: <span class="price">$29.50</span></p>
+                <div class="checkout">
+                    <input type="button" value="Checkout"/>
                 </div>
+        </div>
+    </div>
+    </div>
 
-                <div class="hour">
-                    <h4>Hours & Location:</h4>
-                    <p>Mon - Fri at 7am - 5pm <br> Saturday at 9am - 5pm</p>
-                    <p>1234 Forbes Avenue <br> Pittsburgh, PA 15213</p>
-                </div>
-                <div class="contact">
-                    <h4>Contact Us:</h4>
-                    <p>Tel: 123-456-7890</p>
-                    <p>bunbun@gmail.com</p>
-                </div>
-                <div class="socials">
-                    <img alt="fb" src="images/facebook.png">
-                    <img alt="insta" src="images/instagram.png">
-                    <img alt="yelp" src="images/yelp.png">
-                </div>
+    <!-- Footer with additional info -->
+    <footer>
+        <div class="foot">
+            <div class="logo">
+                <h4>Bun Bun Bakeshop</h4>
             </div>
-        </footer> 
-    </body>
+
+            <div class="hour">
+                <h4>Hours & Location:</h4>
+                <p>Mon - Fri at 7am - 5pm <br> Saturday at 9am - 5pm</p>
+                <p>1234 Forbes Avenue <br> Pittsburgh, PA 15213</p>
+            </div>
+            <div class="contact">
+                <h4>Contact Us:</h4>
+                <p>Tel: 123-456-7890</p>
+                <p>bunbun@gmail.com</p>
+            </div>
+            <div class="socials">
+                <img alt="fb" src="images/facebook.png">
+                <img alt="insta" src="images/instagram.png">
+                <img alt="yelp" src="images/yelp.png">
+            </div>
+        </div>
+    </footer> 
+</body>
 
 </html>

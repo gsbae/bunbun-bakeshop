@@ -7,13 +7,13 @@ header{ /*general header*/
  .logo{ /*logo in header*/
     float: left;
     font-family: 'Sacramento', cursive;
-    font-size: 26px;
+    font-size: 1.5em;
     padding-top: 45px;
 } 
 
 .navbar { /*nav bar in header*/
     float: right;
-    font-size: 16px;
+    font-size: 1em;
     color: #2E1900;
     padding-top: 45px;
 }
@@ -29,7 +29,7 @@ a{
 }
 
  #about, #ourrolls{
-    padding-right: 15px; /*add space for about menu option*/
+    padding-right: .5em; /*add space for about menu option*/
 }
 
 #cartimg{
@@ -193,16 +193,24 @@ body { /*general body*/
 
 .gallery{ /*product browsing page gallery images*/
     display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto;
-    margin: 0px 150px;
-    grid-gap: 40px;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+    padding: 5% 10%;
 }
 
-.item{ /*each individual item and caption in gallery*/
-    margin: 0px;
-    padding-top: 50px;
-    padding-bottom: 40px;
+ .item{
+    position: relative;
+    margin: 0;
+    padding-top: 5%;
+    padding-bottom: 5%;
+ }
+
+ .item img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
 }
 
 .column a{ /*link to product detail page*/
@@ -214,7 +222,7 @@ body { /*general body*/
 
 .prodImg{
     float: left;
-    width: 40%;
+    width: 45%;
     padding-left: 10%;
     padding-top: 50px;
 }
@@ -226,31 +234,20 @@ body { /*general body*/
 .product{ /*body of product detail page*/
     float: right;
     padding-top: 40px;
-    line-height: 10px;
+    line-height: 2em;
     padding-right: 15%;
     width: 30%;
 }
 
-.info h1{
-    max-height: 40px;
-    line-height: 30px;
-    padding-bottom: 0px;
-
-}
-
 .info p{ /*cost of product*/
     font-size: 20px;
-    padding-top: 0px;
 }
 
-.glaze{
-    padding-top: 50px;
-    padding-bottom: 50px;
+.glaze, .qty{
+    padding-top: 1em;
+    padding-bottom: 2em;
 }
 
-.glaze label, .qty label{
-    padding-right: 10px;
-}
 
 #glazeOptions{
     height: 35px;
@@ -272,7 +269,7 @@ body { /*general body*/
 }
 
 .cart{ /*add to cart section*/
-    padding-top: 75px;
+    padding-top: 3em;
 }
 
 .cart button{ /*add to cart section*/
@@ -296,30 +293,22 @@ body { /*general body*/
 }
 
 .bottom{ /*more details and shipping section*/
-    padding-top: 100px;
-    padding-bottom: 150px;
-}
-
-.bottom p{ /*headers of bottom section*/
-    padding-top: 10px;
-    padding-bottom: 10px
+    padding-top: 10em;
+    padding-bottom: 10em;
 }
 
 .bottom hr{ /*line as dividers */
     border: 1px solid #D59E5D;
 }
 
-i { /*drop down section*/
-    border: solid black;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
+details{
+    padding-top: 10px;
+    padding-bottom: 15px;
+    line-height: 20px;
 }
 
-.down { /* drop down*/
-    float: right;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
+details p{
+    font-size: 14px;
 }
 
 /*About us*/
@@ -369,70 +358,68 @@ i { /*drop down section*/
 }
 
 /*Cart page*/
-.cart-head{
-    padding-top: 50px;
-    width: 75%;
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
 }
 
-.cart-head p{
+.cart-body table {
+  border-collapse: collapse;
+  width: 60%;
+}
+
+.cart-body{
+    padding: 5% 0% 5% 10%;
+    -ms-flex: 50%; /* IE10 */
+    flex: 50%;
+}
+
+th{
+  padding: 8px;
+  text-align: left;
+  border-bottom: 2px solid #D59E5D;
+}
+
+.cart-body td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+
+.checkout input{ /*add to cart section*/
+    background-color: #D59E5D;
+    color: white;
+    font-size: 16px;
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    font-family: 'Arvo', serif;
+}
+
+.summary{
+    width: 300px;
+    background-color: #f2f2f2;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
     margin: 0;
 }
 
-.shop-prod{
-    width: 40%;
-    height: 35px;
+.order {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  padding: 5%  10% 5% 0%;
 }
 
-.shop-qty, .shop-cost{
-    width: 15%;
-    height: 35px;
-}
-
-.delete-item{
-    margin-top: 32px;
-    height: 10px;
-}
-
-.shop-prod {
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    float: left;
-    padding-left: 10%;
-}
-
-.shop-qty, .shop-cost{
-    float: left;
-}
-
-
-hr{
-    margin: 0 0 10px 0;
-}
-
-.cart-prods{
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    float: left;
-    padding-left: 10%;
-    font-size: 16px;
-}
-
-#cart-glaze{
-    font-size: 14px;
-    text-indent: 20px;
-    margin: 0px;
-    color: #6b5d4d;
-}
-
-.cart-cost{
-    width: 15%;
-    height: 35px;
+.price{
     float: right;
 }
 
-.total{
-    float:right;
-    padding-right: 10%;
-    font-weight: bolder;
-    padding-top: 50px;
-}

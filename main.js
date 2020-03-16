@@ -10,11 +10,13 @@ function addToCart() {
     document.getElementById('inc').value = ++i;
 }
 
+/*
 function selectGlaze(){
     document.getElementByClassName("option").style.backgroundColor = "#2E1900";
     document.getElementByClassName("option").style.color = "white";
-}
+}*/
 
-function deleteListItem(item) {
-    item.parentNode.removeChild(item);
+function deleteRow(item) {
+    var row = item.parentNode.parentNode;
+    row.parentNode.removeChild(row);
 }
