@@ -138,13 +138,13 @@ function clickBun(item){
 
 function loadProdPage(){
     /*get stored bun */
-    var cartItems = JSON.parse(sessionStorage.getItem("cart"));
-    if (cartItems === null) {
-        document.getElementById('inc').value = cartItems.length;
-    }
-    else{
+    var cartItems = JSON.parse(sessionStorage.getItem("cartItems"));
+    if (cartItems !== null) {
+        document.getElementById('inc').value = 0;
+
     console.log(cartItems.length);
     document.getElementById('inc').value = cartItems.length;
+    }
     var bun = JSON.parse(localStorage.getItem("buns"));
     
     /*update page for specific bun*/
@@ -152,7 +152,6 @@ function loadProdPage(){
     document.getElementById("prodCost").textContent = formatter.format(bun.cost);
     document.getElementById("description").textContent = bun.description;
     document.getElementById("image1").setAttribute("src", bun.image);
-    }
 }
 
 function loadCartPage(){
