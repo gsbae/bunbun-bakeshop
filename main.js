@@ -211,7 +211,7 @@ function loadCartPage(){
         document.getElementById("cells").setAttribute("colspan", 5);
         /*update the html loopng thorugh each item in list  */
     }
-    updateNumCart();
+    document.getElementById('inc').value = cartItems.length;
 }
 
 
@@ -225,7 +225,6 @@ function loadCartPage(){
         }
         row.parentNode.removeChild(row);
         sessionStorage.setItem("cart", JSON.stringify(cartItems));
-        updateNumCart();
             if (cartItems.length == 0){
         var table = document.getElementsByClassName("itemsInCart")[0];
      
@@ -236,6 +235,8 @@ function loadCartPage(){
         cell1.innerHTML = "Cart is empty";
         document.getElementById("cells").setAttribute("colspan", 5);
         /*update the html loopng thorugh each item in list  */
+
+        document.getElementById('inc').value = cartItems.length;
     }
 }
 
