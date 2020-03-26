@@ -66,7 +66,6 @@ function selectQty(item){
     qty.options[qty.options.selectedIndex].selected = true;
     var qtyText = qty.options[qty.selectedIndex].text;
     item.quantity = qtyText;
-    adjCost(item);
 }
 
 
@@ -140,16 +139,20 @@ function clickBun(item){
 function loadProdPage(){
     /*get stored bun */
     var cartItems = JSON.parse(sessionStorage.getItem("cart"));
+    if (cartItems === null) {
+        document.getElementById('inc').value = cartItems.length;
+    }
+    else{
+    console.log(cartItems.length);
     document.getElementById('inc').value = cartItems.length;
     var bun = JSON.parse(localStorage.getItem("buns"));
     
     /*update page for specific bun*/
-    console.log("WTFFFF");
     document.getElementById("prodName").textContent = bun.name;
     document.getElementById("prodCost").textContent = formatter.format(bun.cost);
     document.getElementById("description").textContent = bun.description;
     document.getElementById("image1").setAttribute("src", bun.image);
-
+    }
 }
 
 function loadCartPage(){
