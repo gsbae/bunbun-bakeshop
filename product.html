@@ -9,7 +9,7 @@
         <meta charset="UTF-8">
     </head>
 
-    <body class="prod">
+    <body class="prod" onload="loadProdPage()">
 
         <header>
             <a class="logo" href="index.html">Bun Bun Bakeshop</a>
@@ -26,18 +26,18 @@
 
         <!-- Image of the one product -->
         <div class="prodImg">
-            <img class = "image1" alt="Blackberry Bun" src="images/image3.png">
+            <img id = "image1" alt="Bun" src="">
         </div>
         <!-- right side with information -->
         <div class="product">
             <div class="info">
-                <h1>Blackberry Bun</h1>
-                <p>$3.50</p>
+                <h1 id="prodName"></h1>
+                <p id="prodCost"></p>
             </div>
             <!-- Glaze options-->
             <div class="glaze">
                 <label for="glazeOptions">Glaze:</label>
-                <select id="glazeOptions">
+                <select id="glazeOptions" onselect="selectedGlaze()">
                     <option>sugar-milk</option>
                     <option>vanilla-milk</option>
                     <option>double chocolate</option>
@@ -47,7 +47,7 @@
             <!-- Quantity options -->
             <div class="qty">
                 <label for="qtyOptions">Qty:</label>
-                <select id="qtyOptions">
+                <select id="qtyOptions" onselect="selectedQty()">
                     <option>1</option>
                     <option>3</option>
                     <option>6</option>
@@ -62,7 +62,7 @@
                 <hr>
                 <details>
                     <summary>Details</summary>
-                    <p>Soft from-scratch rolls filled with brown sugar, cinnamon, and fresh blackberries, topped with a glaze of your choice. Our blackberry buns are a summer favorite to start of your day! </p>
+                    <p id="description"></p>
                 </details>
                 <hr>
                 <details>

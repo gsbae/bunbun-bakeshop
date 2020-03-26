@@ -154,6 +154,9 @@ body { /*general body*/
     padding: 150px 0pc 50px 10%;
 }
 
+/*footer*/
+
+
 .socials img{ /*footer social media images*/
     width: 35px;
     height: 35px;
@@ -169,20 +172,24 @@ body { /*general body*/
     padding-bottom: 50px;
     background-color: #F2E0CA;
     width: 100%;
+    overflow: hidden;
 }
 
-.foot .logo{ /*logo in footer*/
-    float: left;
-    padding-top: 0%;
-    padding-left: 10%;
+footer .logo{ /*logo in footer*/
     vertical-align: middle;
+    padding-left: 10%;
 }
 
-.socials{
+footer .socials{
     float: right;
+    padding-right: 10%;
 }
 
 /*product browsing page*/
+
+#empty td{
+    text-align: center;
+}
 
 .title{ /*title in product browsing page*/
     background-color: #F2E0CA;
@@ -195,8 +202,8 @@ body { /*general body*/
     display: grid;
     justify-content: center;
     align-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, 300px);
+    grid-gap: 20px;
     padding: 5% 10%;
 }
 
@@ -227,7 +234,7 @@ body { /*general body*/
     padding-top: 50px;
 }
 
-.image1{
+#image1{
     width: 90%;
 }
 
