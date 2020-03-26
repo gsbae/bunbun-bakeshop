@@ -144,6 +144,7 @@ function loadProdPage(){
     var bun = JSON.parse(localStorage.getItem("buns"));
     
     /*update page for specific bun*/
+    console.log("WTFFFF");
     document.getElementById("prodName").textContent = bun.name;
     document.getElementById("prodCost").textContent = formatter.format(bun.cost);
     document.getElementById("description").textContent = bun.description;
